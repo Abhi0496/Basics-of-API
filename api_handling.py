@@ -17,4 +17,13 @@ def fetch_random_user():
     else:
         raise Exception("Failed to fetch user details")
 
-fetch_random_user()
+def main():
+    #its better to do try catch in case of web requests to avoid crashing of main
+    try:
+        username, country = fetch_random_user()
+        print(f"Username: {username} \nCountry: {country}")
+    except Exception as e:
+        print(str(e))
+
+if __name__ == "__main__":
+    main()
