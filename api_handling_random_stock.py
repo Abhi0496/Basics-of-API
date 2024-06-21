@@ -22,8 +22,5 @@ def main():
     except Exception as e:
         print(str(e))
 
-    pass
-    pass
-
 if __name__ == "__main__":
     main()
