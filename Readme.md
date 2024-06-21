@@ -1,62 +1,55 @@
-## What is API
-Lets suppose our frontend is in React and backend is in Python so to communicate among themselves we will write API calls.
+# API Overview
 
-So we will decide the protocol and the data that we will be sharing/sending
+## What is an API?
+An API (Application Programming Interface) allows different software systems to communicate with each other. For instance, if your frontend is built with React and your backend uses Python, APIs enable these two components to exchange data seamlessly.
 
-API is to communicate among systems or among applications or servers
+APIs define the protocol and the data format for communication, ensuring that different systems, applications, or servers can interact effectively. When we write API calls, our focus is on specifying how data should be sent and received, without worrying about the underlying mechanisms of data retrieval and processing.
 
-Via API calls we share data. Our only duty is to write API calls and we don't have to worry about how we will get the data, from where we will get the data, what will be the processing of it.
+## Simplifying API Concepts
+An API acts as an interface for one piece of code to interact with another, regardless of whether they are on the same machine or separate machines, or even if they are written in different programming languages.
 
-## From Sudo Code
+APIs facilitate three primary functions:
 
-API- Application Programming Interface
-When piece of code has to interact with another piece of code we use API
-Through API a piece of code can interact with another piece of code which could be running on same machine or another machine. it can be in same language or another
+1. Sending Data
+2. Fetching Data
+3. Performing Computations or Tasks (hence, the term "programming")
 
-Through API you will mention what you have to do-
-1) Send a data
-2) Fetch a data
-3) Do computation or Task? (Hence the programming)
+The term "interface" here implies abstraction, meaning you can interact with a piece of code via an API without needing to understand its internal workings. For example, when you post a comment on a YouTube video, the frontend sends your comment to the backend via an API call. You don’t need to know how the backend processes this comment.
 
-Interface- mean abstraction
+## Advantages of Using APIs
+1. Communication: APIs enable different applications or pieces of code to interact.
+2. Abstraction: You can change the implementation details without affecting the API users. For example, Instagram's "Get Followers" API may change its underlying code, but users of the API don’t need to worry about these changes.
+3. Platform Agnostic: Frontend and backend can be in different programming languages or platforms, yet still communicate via APIs.
 
-As we said via API one piece of code interact with another, ex- When we write comment in youtube video maybe the frontend is taking the comment and giving it to backend which could be in different server. Frontend is sending that via API calls we dont know how the backend is processing that API calls hence the abstraction.
+## Examples of APIs
+1. Private APIs: These are hidden and used internally, such as an application on a phone making a payment.
+2. Public APIs: These are accessible to everyone, like the Google Maps API or Weather API.
+3. Web APIs: These encompass both private and public APIs, allowing cloud-based applications to interact, such as posting pictures or getting followers.
+4. SDK/Library APIs: These are used for specific functionalities like threading, where you can use functions like lock, releaseLock, fork, and join.
 
-So via API we are interacting to another code but we dont know how to implementation will work behind the scene.
+## Designing and Creating APIs
+When designing or creating an API, consider the following factors:
 
-### Advantages-
-1) Communication- Two different app/code to interact
-2) Abstract- Freedom of implementation. Ex- Instagram get follower API. So the implementation of the code can change but again we don't have to worry about the change.
-3) Platform Agnostic- FrontEnd and BackEnd could be in different languages 
+1. API Contracts: Define the endpoints, methods, and data formats for API calls.
+2. Documentation: Provide clear and detailed documentation to help users understand how to interact with your API.
+3. Data Format: Decide on the format for data exchange, such as JSON or XML.
+4. Security: Ensure your API is secure to prevent unauthorized access and protect against threats like Denial-of-Service (DoS) attacks.
 
-### Examples-
-1) Private APIs- Hidden APIs (Application in a Phone making payment)
-2) Public APIs- Available to everyone like Google Map API, Weather API
-3) Web APIs- Superset of Private and Public. Application running on cloud can interact with each other (get follower, post pictures etc)
-4) SDK/Library APIs- For thredding we can use lock, releaselock, fork, join.
+## Industry Standards for API Development
+Depending on the requirements and platform, different standards are used for API development:
+
+1. RPC (Remote Procedure Call): A protocol for requesting services from a program located on another computer.
+2. SOAP (Simple Object Access Protocol): A protocol for exchanging structured information in web services.
+3. REST (Representational State Transfer): An architectural style for designing networked applications, commonly used for web APIs.
+
+## Code Execution
+To make API calls in Python, you need the requests library. Install it using the following command:
 
 
-API are the way on how your data move in the system, get in the system.
-
-### Factors to look for while designing/making an API
-1) API contracts- Deciding the end points that we have to call,methods that we have to use, format in which we will get the data. 
-2) Documentation- 
-3) Data Format-
-4) Security- Why providing the API we are exposing our system in some way. So API security is of huge importance. Like someone can send huge amount of request and can bring down the system.
-
-### Standard defined in industry while writing API
-As per requirement and platform we use it.
-1) RPC-
-2) SOAP-
-3) REST-
-
-## Code Execution-
-So we need requests library for the API call in python
-
-So for that we need to execute-
 ```pip install requests```
 
-If you dont have pip installed then-
+If pip is not installed, update your package list and install it using these commands:
+
 ```sudo apt update```
-and then
+and then:
 ```sudo apt install python3-pip```
